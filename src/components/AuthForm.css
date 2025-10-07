@@ -1,0 +1,273 @@
+/* =====================================================
+   AUTH FORM STYLES - Dark Theme Fix
+   For TeacherLogin.jsx and Register.jsx
+   ===================================================== */
+
+/* =====================================================
+   INPUT FIELD STYLES - Main Fix for Invisible Text
+   ===================================================== */
+
+/* Target all input fields in auth forms */
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  /* Dark background for visibility */
+  background-color: #2d3748 !important;
+  
+  /* White text for contrast */
+  color: #ffffff !important;
+  
+  /* Border styling */
+  border: 2px solid #4a5568 !important;
+  
+  /* Padding and spacing */
+  padding: 0.875rem 1rem !important;
+  
+  /* Rounded corners for modern look */
+  border-radius: 0.5rem !important;
+  
+  /* Font styling */
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  
+  /* Smooth transitions */
+  transition: all 0.3s ease !important;
+  
+  /* Remove autofill yellow background */
+  -webkit-box-shadow: 0 0 0 1000px #2d3748 inset !important;
+  box-shadow: 0 0 0 1000px #2d3748 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Placeholder text styling */
+.auth-form input[type="email"]::placeholder,
+.auth-form input[type="password"]::placeholder,
+.auth-form input[type="text"]::placeholder {
+  color: #a0aec0 !important;
+  opacity: 0.7 !important;
+}
+
+/* Focus state - blue glow for login */
+.auth-form.login-form input[type="email"]:focus,
+.auth-form.login-form input[type="password"]:focus {
+  outline: none !important;
+  border-color: #4299e1 !important;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.3) !important;
+  background-color: #1a202c !important;
+}
+
+/* Focus state - purple glow for register */
+.auth-form.register-form input[type="email"]:focus,
+.auth-form.register-form input[type="password"]:focus {
+  outline: none !important;
+  border-color: #9f7aea !important;
+  box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.3) !important;
+  background-color: #1a202c !important;
+}
+
+/* Hover state */
+.auth-form input[type="email"]:hover:not(:disabled),
+.auth-form input[type="password"]:hover:not(:disabled),
+.auth-form input[type="text"]:hover:not(:disabled) {
+  border-color: #718096 !important;
+  background-color: #1a202c !important;
+}
+
+/* Disabled state */
+.auth-form input[type="email"]:disabled,
+.auth-form input[type="password"]:disabled,
+.auth-form input[type="text"]:disabled {
+  background-color: #4a5568 !important;
+  color: #a0aec0 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+/* =====================================================
+   AUTOFILL OVERRIDE - Prevent Browser Yellow
+   ===================================================== */
+
+.auth-form input:-webkit-autofill,
+.auth-form input:-webkit-autofill:hover,
+.auth-form input:-webkit-autofill:focus,
+.auth-form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #2d3748 inset !important;
+  box-shadow: 0 0 0 1000px #2d3748 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 2px solid #4a5568 !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+/* =====================================================
+   LABEL STYLES - Enhanced Visibility
+   ===================================================== */
+
+.auth-form label {
+  color: #2d3748 !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+/* =====================================================
+   ERROR AND SUCCESS MESSAGES
+   ===================================================== */
+
+.auth-form .error-message {
+  background-color: #fed7d7 !important;
+  border: 1px solid #fc8181 !important;
+  color: #c53030 !important;
+  padding: 0.75rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.auth-form .success-message {
+  background-color: #c6f6d5 !important;
+  border: 1px solid #68d391 !important;
+  color: #2f855a !important;
+  padding: 0.75rem !important;
+  border-radius: 0.5rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+/* =====================================================
+   SUBMIT BUTTON ENHANCEMENTS
+   ===================================================== */
+
+.auth-form .submit-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  padding: 0.875rem 1.5rem !important;
+  border-radius: 0.5rem !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+}
+
+.auth-form .submit-button:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4) !important;
+}
+
+.auth-form .submit-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+}
+
+/* =====================================================
+   FORM CONTAINER - Card Styling
+   ===================================================== */
+
+.auth-form-container {
+  background-color: #ffffff !important;
+  border-radius: 1rem !important;
+  padding: 2rem !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+  max-width: 28rem !important;
+  width: 100% !important;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 640px) {
+  .auth-form input[type="email"],
+  .auth-form input[type="password"],
+  .auth-form input[type="text"] {
+    font-size: 0.875rem !important;
+    padding: 0.75rem !important;
+  }
+  
+  .auth-form-container {
+    padding: 1.5rem !important;
+  }
+}
+
+/* =====================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ===================================================== */
+
+.auth-form input:focus-visible {
+  outline: 2px solid #4299e1 !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .auth-form input[type="email"],
+  .auth-form input[type="password"],
+  .auth-form input[type="text"] {
+    border-width: 3px !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .auth-form input[type="email"],
+  .auth-form input[type="password"],
+  .auth-form input[type="text"],
+  .auth-form .submit-button {
+    transition: none !important;
+  }
+}
+
+/* =====================================================
+   HELPER TEXT STYLES
+   ===================================================== */
+
+.auth-form .helper-text {
+  color: #718096 !important;
+  font-size: 0.75rem !important;
+  margin-top: 0.375rem !important;
+}
+
+/* =====================================================
+   LOADING SPINNER
+   ===================================================== */
+
+.auth-form .loading-spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-top-color: #ffffff !important;
+  border-radius: 50% !important;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
+  animation: spin 0.6s linear infinite !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   DARK MODE OPTIMIZATION (if needed in future)
+   ===================================================== */
+
+@media (prefers-color-scheme: dark) {
+  .auth-form input[type="email"],
+  .auth-form input[type="password"],
+  .auth-form input[type="text"] {
+    background-color: #1a202c !important;
+    border-color: #2d3748 !important;
+  }
+}
+
+/* =====================================================
+   PRINT STYLES (hide sensitive fields when printing)
+   ===================================================== */
+
+@media print {
+  .auth-form input[type="password"] {
+    display: none !important;
+  }
+}
